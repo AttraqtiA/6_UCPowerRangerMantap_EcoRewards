@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('garbage_cart_details', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('garbage_cart_id')->index();
+            $table->foreign('garbage_cart_id')->references('id')->on('garbage_carts')->onDelete('cascade');
+            $table->unsignedBigInteger('garbage_id')->index();
+            $table->foreign('garbage_id')->references('id')->on('garbages')->onDelete('cascade');
+            $table->integer('quantity');
+            $table->integer('point');
         });
     }
 

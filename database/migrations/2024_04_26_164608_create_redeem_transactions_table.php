@@ -14,6 +14,13 @@ return new class extends Migration
         Schema::create('redeem_transactions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('user_id')->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('quantity');
+            $table->integer('total_point');
+            $table->date('date');
+            $table->string('accepted_by');
+            $table->boolean('is_approved');
         });
     }
 

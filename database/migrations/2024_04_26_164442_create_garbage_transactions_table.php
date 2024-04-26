@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->int('total_quantity');
-            $table->int('total_point');
-            $table->timestamps('date');
+            $table->integer('total_quantity');
+            $table->integer('total_point');
+            $table->date('date');
             $table->boolean('accepted_by');
             $table->boolean('is_approved');
         });
