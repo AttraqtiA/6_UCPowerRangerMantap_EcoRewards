@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin.garbage');
+    return view('admin.admin_detail.garbageDetail');
 });
 
 // Auth::routes();

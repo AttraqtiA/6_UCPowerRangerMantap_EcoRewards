@@ -4,6 +4,7 @@
 <head>
     <title>lorem ipsum</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>

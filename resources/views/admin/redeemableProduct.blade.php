@@ -9,12 +9,12 @@
                     class="flex flex-col md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                     <div class="flex-1 flex items-center space-x-2">
                         <h5>
-                            <span class="text-gray-500">Semua Sampah :</span>
+                            <span class="text-gray-500">Semua Produk :</span>
                             <span class="text-gray-500">2</span>
                         </h5>
                     </div>
                     <div class="text-lg font-bold text-gray-800">
-                        Daftar Sampah
+                        Daftar Produk
                     </div>
                 </div>
                 <div
@@ -22,7 +22,7 @@
                     <div class="w-full md:w-1/3">
                         <form class="flex items-center" method="GET">
 
-                            <label for="simple-search" class="sr-only">Search</label>
+                            <label for="simple-search" class="sr-only">Cari</label>
                             <div class="relative w-full">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor"
@@ -59,9 +59,9 @@
                         <thead class="text-xs text-center text-gray-700 uppercase bg-gray-50">
                             <tr>
                                 <th scope="col" class="p-4">No.</th>
-                                <th scope="col" class="p-4">Nama Sampah</th>
-                                <th scope="col" class="p-4">Ukuran</th>
-                                <th scope="col" class="p-4">Poin</th>
+                                <th scope="col" class="p-4">Nama Produk</th>
+                                <th scope="col" class="p-4">Harga Poin</th>
+                                <th scope="col" class="p-4">Stok</th>
                                 <th scope="col" class="p-4">Aksi</th>
                             </tr>
                         </thead>
@@ -71,9 +71,9 @@
                                     {{ 1 }}
                                 </td>
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Kaleng</td>
+                                    Tas Recycle</td>
                                 <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Kecil
+                                    800
                                 </td>
 
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
@@ -92,9 +92,9 @@
                                     {{ 2 }}
                                 </td>
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Plastik</td>
+                                    Topi Recycle</td>
                                 <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Sedang
+                                    600
                                 </td>
 
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
