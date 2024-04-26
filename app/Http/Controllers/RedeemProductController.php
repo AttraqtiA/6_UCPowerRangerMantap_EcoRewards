@@ -21,7 +21,7 @@ class RedeemProductController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

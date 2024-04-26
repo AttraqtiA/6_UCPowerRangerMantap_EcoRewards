@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Garbage extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function garbageTransactionDetail()
+    {
+        return $this->hasMany(GarbageTransactionDetail::class, 'garbage_id', 'id');
+    }
+
+    public function gaarbageCartDetail()
+    {
+        return $this->hasMany(GarbageCartDetail::class, 'garbage_id', 'id');
+    }
 }

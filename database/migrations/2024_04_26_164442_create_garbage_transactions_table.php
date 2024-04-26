@@ -14,12 +14,13 @@ return new class extends Migration
         Schema::create('garbage_transactions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->int('total_quantity');
-            $table->int('total_point');
-            $table->timestamps('date');
-            $table->boolean('accepted_by');
-            $table->boolean('is_approved');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('total_quantity')->nullable(false);
+            $table->integer('total_point')->nullable(false);
+            $table->dateTime('date')->nullable(false);
+            $table->string('acceptedBy')->nullable(false);
+            $table->enum('isApproved', ['0', '1'])->default('0');
+            $table->timestamps();
         });
     }
 

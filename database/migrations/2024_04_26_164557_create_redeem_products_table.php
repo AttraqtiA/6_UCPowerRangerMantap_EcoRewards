@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('redeem_products', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullabale(false);
+            $table->string('image')->nullable(false);
+            $table->string('description')->nullable(true);
+            $table->integer('price_point')->nullable(false);
+            $table->integer('stock')->nullable(false);
             $table->timestamps();
         });
     }

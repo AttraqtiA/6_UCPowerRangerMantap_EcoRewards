@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('garbages', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable(false);
+            $table->string('size')->nullable(false);
+            $table->string('description')->nullable(false);
+            $table->integer('point')->nullable(false);
             $table->timestamps();
         });
     }

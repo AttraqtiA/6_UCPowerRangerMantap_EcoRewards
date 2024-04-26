@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('redeem_transaction_details', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('redeemProduct_id')->index();
+            $table->foreign('redeemProduct_id')->references('id')->on('redeem_products')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('redeemTransaction_id')->index();
+            $table->foreign('redeemTransaction_id')->references('id')->on('redeem_transactions')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('quantity')->nullable(false);
+            $table->integer('point')->nullable(false);
             $table->timestamps();
         });
     }

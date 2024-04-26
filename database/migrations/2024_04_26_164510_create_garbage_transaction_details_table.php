@@ -13,9 +13,13 @@ return new class extends Migration
     {
         Schema::create('garbage_transaction_details', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('garbage_id')->index();
+            $table->foreign('garbage_id')->references('id')->on('garbages')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('garbageTransaction_id')->index();
+            $table->foreign('garbageTransaction_id')->references('id')->on('garbage_transactions')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('quantity')->nullable(false);
+            $table->integer('point')->nullable(false);
             $table->timestamps();
-            $table->unsignedBigInteger('garbage_transaction_id');
-            $table->foreign('garbage_transaction_id')->references('id')->on('garbage_transactions');
         });
     }
 
