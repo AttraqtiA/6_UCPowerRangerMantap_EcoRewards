@@ -42,4 +42,29 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'role_id', 'id');
+    }
+
+    public function garbageCart()
+    {
+        return $this->hasMany(GarbageCart::class, 'user_id', 'id');
+    }
+
+    public function garbageTransaction()
+    {
+        return $this->hasMany(GarbageTransaction::class, 'user_id', 'id');
+    }
+
+    public function redeemCart()
+    {
+        return $this->hasMany(RedeemCart::class, 'user_id', 'id');
+    }
+
+    public function redeemTransaction()
+    {
+        return $this->hasMany(RedeemTransaction::class, 'user_id', 'id');
+    }
 }
