@@ -11,6 +11,9 @@
         <div>
             @include('layouts.admin.topbar')
         </div>
+        <div class="bg-gray-700">
+            @yield('content_page')
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
 </body>
