@@ -2,19 +2,19 @@
 
 @section('content_page')
     <!-- Start block -->
-    <section class="bg-neutral-200 p-2 sm:p-4 antialiased h-full">
+    <section style="background-color:#047857;" class="p-2 sm:p-4 antialiased h-full">
         <div class="mx-auto max-w-screen-2xl pt-24 sm:ml-56">
             <div class="bg-white relative shadow-md sm:rounded-lg overflow-hidden">
                 <div
                     class="flex flex-col md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                     <div class="flex-1 flex items-center space-x-2">
                         <h5>
-                            <span class="text-gray-500">Semua Order:</span>
+                            <span class="text-gray-500">Semua Data:</span>
                             <span class="text-gray-500">2</span>
                         </h5>
                     </div>
                     <div class="text-lg font-bold text-gray-800">
-                        Daftar Order Hari Ini dan Kemarin
+                        Daftar Hari Ini
                     </div>
                 </div>
                 <div
@@ -61,9 +61,9 @@
                                 <th scope="col" class="p-4">No.</th>
                                 <th scope="col" class="p-4">Tanggal</th>
                                 <th scope="col" class="p-4">Customer</th>
-                                <th scope="col" class="p-4">Cek</th>
                                 <th scope="col" class="p-4">Total Kuantitas</th>
                                 <th scope="col" class="p-4">Total poin</th>
+                                <th scope="col" class="p-4">Cek</th>
                                 <th scope="col" class="p-4">Status</th>
                             </tr>
                         </thead>
@@ -78,18 +78,17 @@
                                     Louis
                                 </td>
 
+                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                    15 </td>
+
+                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                    150 </td>
 
                                 <td class="py-3 px-4 font-medium text-gray-900 whitespace-nowrap">
                                     <button type="button"
                                         class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Detail</button>
 
                                 </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    15 </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    150 </td>
 
                                 <td class="px-4 py-3 font-medium text-green-400 whitespace-nowrap">
                                     Telah Dikonfirmasi</td>
@@ -106,18 +105,17 @@
                                     Samuel
                                 </td>
 
+                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                    20 </td>
+
+                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                    200 </td>
 
                                 <td class="py-3 px-4 font-medium text-gray-900 whitespace-nowrap">
                                     <button type="button"
                                         class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Detail</button>
 
                                 </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    20 </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    200 </td>
 
                                 <td class="px-4 py-3 font-medium text-red-500 whitespace-nowrap">
                                     Belum Dikonfirmasi</td>
