@@ -9,7 +9,8 @@
                     class="flex flex-col md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                     <div class="flex-1 flex items-center space-x-2">
                         <h5>
-                            <span class="text-gray-500">Semua Data:</span>
+                            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Create</button>
+                            <span class="text-gray-500 ml-4">Semua Data:</span>
                             <span class="text-gray-500">2</span>
                         </h5>
                     </div>
@@ -61,10 +62,10 @@
                                 <th scope="col" class="p-4">No.</th>
                                 <th scope="col" class="p-4">Tanggal</th>
                                 <th scope="col" class="p-4">Customer</th>
+                                <th scope="col" class="p-4">Email Customer</th>
                                 <th scope="col" class="p-4">Total Kuantitas</th>
                                 <th scope="col" class="p-4">Total poin</th>
                                 <th scope="col" class="p-4">Cek</th>
-                                <th scope="col" class="p-4">Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -76,6 +77,10 @@
                                     15 April 2024</td>
                                 <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                     Louis
+                                </td>
+
+                                <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                    louis@gmail.com
                                 </td>
 
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
@@ -90,9 +95,6 @@
 
                                 </td>
 
-                                <td class="px-4 py-3 font-medium text-green-400 whitespace-nowrap">
-                                    Telah Dikonfirmasi</td>
-
                             </tr>
 
                             <tr class="border-b hover:bg-gray-100">
@@ -103,6 +105,10 @@
                                     17 April 2024</td>
                                 <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                     Samuel
+                                </td>
+
+                                <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                    samuel@gmail.com
                                 </td>
 
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
@@ -116,9 +122,6 @@
                                         class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Detail</button>
 
                                 </td>
-
-                                <td class="px-4 py-3 font-medium text-red-500 whitespace-nowrap">
-                                    Belum Dikonfirmasi</td>
 
                             </tr>
 
