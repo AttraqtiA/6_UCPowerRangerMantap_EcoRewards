@@ -51,6 +51,11 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class, 'role_id', 'id');
     }
 
+    public function userMisi()
+    {
+        return $this->hasMany(UserMisi::class, 'user_id', 'id');
+    }
+
     public function garbageCart()
     {
         return $this->hasMany(GarbageCart::class, 'user_id', 'id');

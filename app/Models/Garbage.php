@@ -16,7 +16,7 @@ class Garbage extends Model
         return $this->hasMany(GarbageTransactionDetail::class, 'garbage_id', 'id');
     }
 
-    public function gaarbageCartDetail()
+    public function garbageCartDetail()
     {
         return $this->hasMany(GarbageCartDetail::class, 'garbage_id', 'id');
     }
