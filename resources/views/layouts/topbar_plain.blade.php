@@ -6,18 +6,6 @@
                     src="{{ asset('assets/logo.svg') }}" alt="Icon" />
             </a>
         </div>
-        <nav class="hidden md:flex items-center">
-            <a href="#tentangKBS"
-                class="text-slate-600 text-lg font-semibold mr-6 hover:text-green-500 transition duration-300 ease-in-out">Tentang
-                KBS</a>
-            <a href="#KBSPoint"
-                class="text-slate-600 text-lg font-semibold mr-6 hover:text-green-500 transition duration-300 ease-in-out">Apa
-                itu KBS Point?</a>
-            <a href="#Kontak"
-                class="text-slate-600 text-lg font-semibold mr-6 hover:text-green-500 transition duration-300 ease-in-out">Kontak</a>
-            <a href="#Lokasi"
-                class="text-slate-600 text-lg font-semibold hover:text-green-500 transition duration-300 ease-in-out">Lokasi</a>
-        </nav>
 
         @guest
             <div class="hidden md:flex items-center">

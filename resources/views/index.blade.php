@@ -2,7 +2,7 @@
 
 @section('content')
     <main>
-        <section class="bg-white py-20">
+        <section id="home" class="bg-white py-20">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap -mx-4 items-center">
                     <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
@@ -29,7 +29,7 @@
         </section>
 
 
-        <section class="bg-slate-50 py-20">
+        <section id="tentangKBS" class="bg-slate-50 py-20">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap items-center">
                     <div class="w-full md:w-1/2 mb-8 md:mb-0">
@@ -38,7 +38,7 @@
                                 alt="Gambar 1" />
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2">
+                    <div class="w-full md:w-1/2 md:pr-16">
                         <span
                             class="text-green-500 text-2xl font-semibold font-['Poppins'] mb-2 inline-block transform -rotate-1">Tentang
                             Kebun Binatang Surabaya</span>
@@ -50,7 +50,7 @@
                             Terdapat lebih dari 230 spesies satwa yang berbeda yang terdiri lebih dari 2179 ekor satwa,
                             terdiri dari Mamalia, Aves, Reptilia, dan Pisces.
                         </p>
-                        <a href="#"
+                        <a href="https://www.surabayazoo.co.id/" target="_blank"
                             class="border-2 border-slate-600 text-black text-lg md:text-xl font-semibold font-['Poppins'] px-6 py-3 rounded-xl hover:bg-slate-600 hover:text-white transition duration-300 ease-in-out">Info
                             lebih lanjut</a>
                     </div>
@@ -58,7 +58,7 @@
             </div>
         </section>
 
-        <section class="bg-white py-16 md:py-20">
+        <section id="KBSPoint" class="bg-white py-16 md:py-20">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <span
@@ -67,7 +67,7 @@
                     <h2 class="text-black text-3xl md:text-5xl font-bold font-['Poppins'] leading-tight">Terobosan Baru
                         Untuk Pengelolaan Sampah</h2>
                 </div>
-                <div class="flex flex-wrap -mx-4 items-center">
+                <div class="flex flex-wrap -mx-4 items-center md:ml-16 lg:ml-24">
                     <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
                         <p class="text-slate-600 text-lg md:text-xl font-medium font-['Poppins'] mb-8">
                             <span>Sebuah program inisiatif</span>
@@ -111,7 +111,7 @@
             </div>
         </section>
 
-        <section class="bg-slate-50 py-20">
+        <section id="Kontak" class="bg-slate-50 py-20">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-black text-6xl font-bold font-['Poppins'] leading-tight">
@@ -155,7 +155,7 @@
             </div>
         </section>
 
-        <section class="bg-cover bg-center py-32" style="background-image: url('{{ asset('assets/background.svg') }}');">
+        <section id="Lokasi" class="bg-cover bg-center py-32" style="background-image: url('{{ asset('assets/background.svg') }}');">
             <div class="container mx-auto px-4">
                 <div class="text-center">
                     <h2 class="text-5xl font-bold font-['Poppins'] leading-tight mb-8">
@@ -164,7 +164,7 @@
                         <span class="text-green-500">Poin</span>
                         <span class="text-white">!</span>
                     </h2>
-                    <a href="#"
+                    <a href="{{ route('register') }}"
                         class="bg-green-500 text-white text-2xl font-semibold font-['Poppins'] px-12 py-4 rounded-3xl hover:bg-green-600 transition duration-300 ease-in-out inline-block">Daftar
                         Sekarang</a>
                 </div>
