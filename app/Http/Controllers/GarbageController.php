@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use App\Models\Garbage;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreGarbageRequest;
@@ -21,7 +22,7 @@ class GarbageController extends Controller
             $garbages = Garbage::paginate(10);
         }
 
-        return view('GarbageBank.GarbagesListPage', [
+        return view('GarbageBank.garbageList', [
             "active_3" => "text-yellow-500",
             "garbages" => $garbages
         ]);
