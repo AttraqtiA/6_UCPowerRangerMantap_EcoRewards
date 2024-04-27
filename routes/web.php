@@ -21,7 +21,7 @@ use App\Http\Controllers\RedeemTransactionController;
 */
 Route::get('/', function () {
     // return view('Redeemer.RedeemProductAddPage');
-    return view('user.visitor_homepage');
+    return view('index');
 });
 
 // return view('admin.admin_detail.redeemableProductDetail');
@@ -65,8 +65,8 @@ Route::patch('/garbageList/{garbage}', [GarbageController::class, 'update'])->na
 Route::delete('/garbageList/{garbage}', [GarbageController::class, 'destroy'])->name('garbageList.destroy');
 
 
-Route::get('/visitorHomepage', [RedeemTransactionController::class, 'index'])->name('redeemTransaction.VisitorHomePage');
-
+Route::get('/visitorHomepage', [RedeemTransactionController::class, 'index'])->name('visitor.homepage');
+Route::get('/katalogProduk', [RedeemTransactionController::class, 'show'])->name('visitor.katalogProduk');
 
 // Redeemer ROLE ======================================================================================================
 Route::group([

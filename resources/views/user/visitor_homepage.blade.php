@@ -2,7 +2,7 @@
 
 @section('content_page')
     <section class="w-screen pt-16">
-        <section class="w-full rounded-xl h-64 bg-no-repeat object-center bg-[url('/image/Background.png')]">
+        <section class="rounded-xl h-64 w-full bg-no-repeat object-center bg-[url('/image/Background.png')]">
             <div class="px-4 max-w-screen-xl pl-24 pt-10">
                 <h1 class="mb-2 text-3xl font-bold tracking-tight leading-none text-white">Halo Yobel!
                 </h1>
@@ -45,7 +45,7 @@
                         <span class="text-green-500">Katalog Produk</span> yang Dapat <span
                             class="text-green-500">Ditukarkan</span>
                     </h1>
-                    <a href="#"
+                    <a href="{{ route('visitor.katalogProduk') }}"
                         class="inline-flex justify-center items-center py-3 px-5 text-lg font-medium px-8 text-center text-white rounded-lg bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                         Daftar Produk
                     </a>

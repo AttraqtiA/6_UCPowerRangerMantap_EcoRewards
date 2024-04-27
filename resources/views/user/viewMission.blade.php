@@ -1,7 +1,6 @@
-<head>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+@extends('layouts.frame_visitor')
 
+@section('content_page')
 <section class="object-cover bg-repeat bg-[url('/image/Group19.png')]">
     <div class="text-center p-10">
         <h1 class="font-bold text-5xl text-white mb-4">Misi yang tersedia</h1>
@@ -148,3 +147,4 @@
 
     </section>
 </section>
+@endsection

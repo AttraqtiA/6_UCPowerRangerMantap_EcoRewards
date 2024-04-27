@@ -1,6 +1,6 @@
-<head>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+@extends('layouts.frame_visitor')
+
+@section('content_page')
 <section>
     <section class="text-gray-700 body-font overflow-hidden bg-white">
         <div class="container px-5 py-6 mx-auto">
@@ -70,3 +70,4 @@
         </div>
     </section>
 </section>
+@endsection
