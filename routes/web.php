@@ -19,6 +19,7 @@ use App\Http\Controllers\RedeemTransactionController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/', function () {
     // return view('Redeemer.RedeemProductAddPage');
     return view('index');
@@ -42,6 +43,13 @@ Route::group([
 
 
 
+Route::get('/garbageList', [GarbageController::class, 'index'])->name('garbageList.index');
+Route::post('/garbageList', [GarbageController::class, 'store'])->name('garbageList.store');
+Route::get('/garbageList/create', [GarbageController::class, 'create'])->name('garbageList.create');
+Route::get('/garbageList/{garbage}', [GarbageController::class, 'show'])->name('garbageList.show');
+Route::patch('/garbageList/{garbage}', [GarbageController::class, 'update'])->name('garbageList.update');
+Route::delete('/garbageList/{garbage}', [GarbageController::class, 'destroy'])->name('garbageList.destroy');
+Route::post('/garbageList/{garbage}/edit', [GarbageController::class, 'store'])->name('garbageList.edit');
 
 Route::get('/redeemProducts', [RedeemProductController::class, 'index'])->name('redeemProduct.index'); // CHECKED
 Route::get('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'show'])->name('redeemProduct.show'); //CHECKED
@@ -74,7 +82,6 @@ Route::group([
     'prefix' => 'redeemer',
     'as' => 'redeemer.'
 ], function () {
-
 });
 
 // Member ROLE ======================================================================================================
@@ -93,6 +100,6 @@ Route::group([
 
 
 
-Auth::routes();
+// Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

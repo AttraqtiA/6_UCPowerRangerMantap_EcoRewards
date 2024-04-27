@@ -47,7 +47,7 @@ class RedeemProductController extends Controller
             'name' => 'required|max:8|unique:redeem_products',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:5000', // ini untuk validasi file image
             'description' => 'required',
-            'price_point' => 'required|numeric',
+            'price' => 'required|numeric',
             'stock' => 'required|numeric',
         ], [
             'name.required' => 'Nama wajib diisi!',
@@ -58,40 +58,30 @@ class RedeemProductController extends Controller
             'image.mimes' => 'Hanya diperbolehkan dalam bentuk jpeg, png, jpg!',
             'image.max' => 'Maksimal 5 mb',
             'description.required' => 'Deskripsi wajib diisi!',
-            'price_point.required' => 'Point wajib diisi!',
-            'price_point.numeric' => 'Point wajib berupa angka!',
+            'price.required' => 'Point wajib diisi!',
+            'price.numeric' => 'Point wajib berupa angka!',
             'stock.required' => 'Stock wajib diisi!',
             'stock.numeric' => 'Stock wajib berupa angka!',
 
         ]);
 
         // cek apakah ada inputan file berupa image, kalau ada file image dimasukkan ke folder image di public lalu pathnya masuk ke database
-        if ($request->file('image')) {
 
-            $validatedData['image'] = $request->file('image')->store('upload_RedeemProduct_images', ['disk' => 'public']);
-            // disk public ini untuk membuat folder upload_images di folder storage/app/public
-            // function store ini akan memasukkan gambar ke dalam storage/public/nama_folder_image
-            // dengan nama file yang sudah merupakan string random sehingga memungkinkan kita untuk
-            // memasukkan file gambar dengan nama yang sama tapii beda gambar.
+        $validatedData['image'] = $request->file('image')->store('upload_RedeemProduct_images', ['disk' => 'public']);
+        // disk public ini untuk membuat folder upload_images di folder storage/app/public
+        // function store ini akan memasukkan gambar ke dalam storage/public/nama_folder_image
+        // dengan nama file yang sudah merupakan string random sehingga memungkinkan kita untuk
+        // memasukkan file gambar dengan nama yang sama tapii beda gambar.
 
-            $redeemProduct = RedeemProduct::create([
-                'name' => $validatedData['name'],
-                'image' => $validatedData['image'],
-                'description' => $validatedData['description'],
-                'price_point' => $validatedData['price'],
-                'stock' => $validatedData['stock'],
-            ]);
-        } else {
-            $redeemProduct = RedeemProduct::create([
-                'name' => $validatedData['name'],
-                'image' => $validatedData['image'],
-                'description' => $validatedData['description'],
-                'price_point' => $validatedData['price'],
-                'stock' => $validatedData['stock'],
-            ]);
-        }
+        RedeemProduct::create([
+            'name' => $validatedData['name'],
+            'image' => $validatedData['image'],
+            'description' => $validatedData['description'],
+            'price_point' => $validatedData['price'],
+            'stock' => $validatedData['stock'],
+        ]);
 
-        return back()->with('addRedeemProduct_success', 'Produk berhasil ditambahkan!');
+        return redirect()->route('redeemProduct.index');
     }
 
     /**
@@ -105,9 +95,7 @@ class RedeemProductController extends Controller
                 "TabTitle" => $redeemProduct->name,
                 "redeemProduct" => $redeemProduct,
             ]);
-        }
-        else {
-
+        } else {
         }
     }
 
@@ -161,7 +149,7 @@ class RedeemProductController extends Controller
             $redeemProduct->update([
                 'name' => $validatedData['name'],
                 'image' => $validatedData['image'], // ini untuk validasi file image
-                'description' =>$validatedData['description'],
+                'description' => $validatedData['description'],
                 'price_point' => $validatedData['price_point'],
                 'stock' => $validatedData['stock'],
             ]);
@@ -169,7 +157,7 @@ class RedeemProductController extends Controller
             $redeemProduct->update([
                 'name' => $validatedData['name'],
                 'image' => $validatedData['image'], // ini untuk validasi file image
-                'description' =>$validatedData['description'],
+                'description' => $validatedData['description'],
                 'price_point' => $validatedData['price_point'],
                 'stock' => $validatedData['stock'],
             ]);
