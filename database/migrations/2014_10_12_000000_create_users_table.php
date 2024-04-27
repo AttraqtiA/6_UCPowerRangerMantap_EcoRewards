@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('role_id')->nullable(false);
             $table->enum('isLogin', ['0', '1'])->default('0');
             $table->enum('isActive', ['0', '1'])->default('0');
             $table->rememberToken();
