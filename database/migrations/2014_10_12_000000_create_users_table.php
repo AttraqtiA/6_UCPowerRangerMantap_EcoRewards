@@ -13,11 +13,17 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('role_id');
-            $table->string('user_name');
+            $table->unsignedBigInteger('role_id')->index();
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('user_name')->nullable(false);
+            $table->integer('user_quantity')->nullable(true);
+            $table->integer('user_point')->nullable(true);
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('user_point');
+            $table->enum('isLogin', ['0', '1'])->default('0');
+            $table->enum('isActive', ['0', '1'])->default('0');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 

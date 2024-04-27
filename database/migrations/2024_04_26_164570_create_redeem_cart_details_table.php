@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('redeem_cart_details', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('redeemCart_id')->index();
+            $table->foreign('redeemCart_id')->references('id')->on('redeem_carts')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('redeemProduct_id')->index();
+            $table->foreign('redeemProduct_id')->references('id')->on('redeem_products')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('quantity')->nullable(false);
+            $table->integer('point')->nullable(false);
             $table->timestamps();
             $table->unsignedBigInteger('redeem_cart_id')->index();
             $table->foreign('redeem_cart_id')->references('id')->on('redeem_carts')->onDelete('cascade');
