@@ -21,7 +21,7 @@ use App\Http\Controllers\RedeemTransactionController;
 */
 Route::get('/', function () {
     // return view('Redeemer.RedeemProductAddPage');
-    return view('index');
+    return view('user.visitor_homepage');
 });
 
 // return view('admin.admin_detail.redeemableProductDetail');
