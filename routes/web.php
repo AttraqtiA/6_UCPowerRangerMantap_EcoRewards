@@ -52,7 +52,7 @@ Route::post('/garbageList/{garbage}/edit', [GarbageController::class, 'store'])-
 
 Route::get('/redeemProducts', [RedeemProductController::class, 'index'])->name('redeemProduct.index'); // CHECKED
 Route::post('/redeemProducts', [RedeemProductController::class, 'store'])->name('redeemProduct.store');
-Route::get('/redeemProducts/create', [RedeemProductController::class, 'create'])->name('redeemProduct.create');
+Route::get('/redeemProducts/create', [RedeemProductController::class, 'create'])->name('redeemProduct.create'); // CHECKED
 Route::get('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'show'])->name('redeemProduct.show'); //CHECKED
 Route::patch('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'update'])->name('redeemProduct.update');
 Route::delete('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'destroy'])->name('redeemProduct.destroy');
@@ -92,6 +92,6 @@ Route::group([
 
 
 
-Auth::routes();
+// Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
