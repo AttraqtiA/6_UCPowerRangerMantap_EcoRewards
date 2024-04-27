@@ -12,7 +12,7 @@
                         <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
                             <div class="text-gray-600">
                                 <p class="font-medium text-lg">Edit List Sampah : </p>
-                                <p class="font-medium text-lg">Plastik</p>
+                                <p class="font-bold text-2xl">Plastik</p>
                                 <p>Harap isi semuanya.</p>
                             </div>
 
@@ -44,7 +44,7 @@
                                     </div>
 
                                     <div class="md:col-span-5 text-right">
-                                        
+
                                         <button type="button"
                                             class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
                                     </div>

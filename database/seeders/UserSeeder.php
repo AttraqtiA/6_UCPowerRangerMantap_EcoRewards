@@ -40,6 +40,19 @@ class UserSeeder extends Seeder
             'remember_token' => Str::random(10),
         ]);
 
+        User::create([
+            'user_name' => 'Yobel',
+            'role_id' => 3,
+            'isLogin' => '0',
+            'isActive' => '1',
+            'email' => 'yobel@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('yobelganteng'),
+            'user_quantity' => 10,
+            'user_point' => 150,
+            'remember_token' => Str::random(10),
+        ]);
+
         User::factory(3)->create();
 
     }

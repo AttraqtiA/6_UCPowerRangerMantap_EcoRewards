@@ -3,7 +3,7 @@
 @section('content_page')
     <!-- Start block -->
     <section style="background-color:#047857;" class="p-2 sm:p-4 antialiased h-full">
-        <div class="mx-auto max-w-screen-2xl py-12 sm:ml-56">
+        <div class="mx-auto max-w-screen-2xl py-12 px-24">
             <div class="bg-white relative shadow-md sm:rounded-lg overflow-hidden">
                 <div
                     class="flex flex-col md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">

@@ -2,7 +2,7 @@
 
 @section('content')
     <main>
-        <section id="home" class="bg-white py-20">
+        <section id="home" class="mt-8 bg-white py-20">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap -mx-4 items-center">
                     <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
@@ -12,7 +12,7 @@
                         <h1 class="text-black text-6xl font-bold font-Poppins leading-tight mb-4">
                             <span>Tukarkan </span>
                             <span class="text-green-500">Sampahmu</span>
-                            <br />
+                            <br/>
                             <span>Dengan </span>
                             <span class="text-green-500">Poin</span>
                         </h1>

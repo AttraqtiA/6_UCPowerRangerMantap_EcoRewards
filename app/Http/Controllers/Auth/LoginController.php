@@ -69,13 +69,13 @@ class LoginController extends Controller
 
         if (Auth::attempt($trashbank, true)) {
             $this->isLogin(Auth::id());
-            return redirect()->route('/'); // bisa buat ke halaman khusus admin aja
+            return redirect()->route('redeemProduct.index'); // bisa buat ke halaman khusus admin aja
         } else if (Auth::attempt($redeemer, true)) {
             $this->isLogin(Auth::id());
-            return redirect()->route('/'); // TIDAK PERLU SLASH / soalnya udah ->name('home') di routes/web.php, mau ke student_list udh kuset sih
+            return redirect()->route('redeemProduct.index'); // TIDAK PERLU SLASH / soalnya udah ->name('home') di routes/web.php, mau ke student_list udh kuset sih
         } else if (Auth::attempt($member, true)) {
             $this->isLogin(Auth::id());
-            return redirect()->route('redeemTransaction.VisitorHomePage');
+            return redirect()->route('redeemProduct.index');
         }
 
         return redirect()->route('login')->with('error', 'Email atau password salah!');

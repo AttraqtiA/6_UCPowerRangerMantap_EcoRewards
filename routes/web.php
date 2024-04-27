@@ -20,6 +20,7 @@ use App\Http\Controllers\RedeemTransactionController;
 |
 */
 Route::get('/', function () {
+    // return view('Redeemer.RedeemProductAddPage');
     return view('index');
 });
 
