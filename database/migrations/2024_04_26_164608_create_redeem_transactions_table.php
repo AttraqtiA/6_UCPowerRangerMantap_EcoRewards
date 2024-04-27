@@ -21,13 +21,6 @@ return new class extends Migration
             $table->string('acceptedBy')->nullable(false);
             $table->enum('isApproved', ['0', '1'])->default('0');
             $table->timestamps();
-            $table->unsignedBigInteger('user_id')->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->integer('quantity');
-            $table->integer('total_point');
-            $table->date('date');
-            $table->string('accepted_by');
-            $table->boolean('is_approved');
         });
     }
 

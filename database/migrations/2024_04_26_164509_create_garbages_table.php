@@ -19,10 +19,6 @@ return new class extends Migration
             $table->string('description')->nullable(false);
             $table->integer('point')->nullable(false);
             $table->timestamps();
-            $table->string('name');
-            $table->integer('size');
-            $table->text('description');
-            $table->integer('point');
         });
     }
 

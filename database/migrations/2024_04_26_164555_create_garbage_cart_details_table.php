@@ -18,12 +18,6 @@ return new class extends Migration
             $table->unsignedBigInteger('garbage_id')->index();
             $table->foreign('garbage_id')->references('id')->on('garbages')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
-            $table->unsignedBigInteger('garbage_cart_id')->index();
-            $table->foreign('garbage_cart_id')->references('id')->on('garbage_carts')->onDelete('cascade');
-            $table->unsignedBigInteger('garbage_id')->index();
-            $table->foreign('garbage_id')->references('id')->on('garbages')->onDelete('cascade');
-            $table->integer('quantity');
-            $table->integer('point');
         });
     }
 

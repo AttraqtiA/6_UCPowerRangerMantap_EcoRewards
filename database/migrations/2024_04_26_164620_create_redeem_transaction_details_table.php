@@ -20,12 +20,6 @@ return new class extends Migration
             $table->integer('quantity')->nullable(false);
             $table->integer('point')->nullable(false);
             $table->timestamps();
-            $table->unsignedBigInteger('redeem_transaction_id')->index();
-            $table->foreign('redeem_transaction_id')->references('id')->on('redeem_transactions');
-            $table->unsignedBigInteger('product_id')->index();
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->integer('quantity');
-            $table->integer('point');
         });
     }
 
