@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Redeemer\RedemeerProductController as RedeemerRedeemProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,19 @@ Route::group([
     // Route::get('/order_history', [AdminOrderController::class, 'history'])->name('order_history');
     // Route::put('/order_history/update/{order}', [AdminOrderController::class, 'updateHistory'])->name('order_history.update');
 });
+
+Route::group([
+    'middleware' => 'redeemer',
+    'prefix' => 'redeemer',
+    'as' => 'redeemer.'
+], function () {
+    Route::get('/redeemProducts', [RedeemerRedeemProductController::class, 'index'])->name('redeemProduct.index');
+    Route::get('/redeemProducts/{redeemProduct}', [RedeemerRedeemProductController::class, 'show'])->name('redeemProduct.show');
+    Route::post('/redeemProducts', [RedeemerRedeemProductController::class, 'store'])->name('redeemProduct.store');
+    Route::patch('/redeemProducts/{redeemProduct}', [RedeemerRedeemProductController::class, 'update'])->name('redeemProduct.update');
+    Route::destroy('/redeemProducts/{redeemProduct}', [RedeemerRedeemProductController::class, 'destroy'])->name('redeemProduct.destroy');
+});
+
 
 Auth::routes();
 
