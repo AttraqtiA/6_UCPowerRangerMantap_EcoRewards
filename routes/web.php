@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 Route::get('/', function () {
-    return view('admin.waitingApprovalMission');
+    return view('user.viewMission');
 });
 
 Auth::routes();
