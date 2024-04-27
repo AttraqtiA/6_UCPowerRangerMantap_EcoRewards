@@ -113,7 +113,7 @@ class RedeemProductController extends Controller
         $redeemProduct = RedeemProduct::where("id", $id)->first();
 
         return view('Redeemer.RedeemProductEditPage', [
-            "redeemProductName" => $redeemProduct->name,
+            "redeemProduct" => $redeemProduct,
             "description" => "Harap isi semuanya."
         ]);
     }

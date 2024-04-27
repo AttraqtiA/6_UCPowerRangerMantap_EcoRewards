@@ -51,9 +51,13 @@ class RedeemTransactionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRedeemTransactionRequest $request, RedeemTransaction $redeemTransaction)
+    public function update($id)
     {
-        //
+        $redeemTransaction = RedeemTransaction::where('id', $id)->first();
+        $redeemTransaction->update([
+            'isApproved' => 1
+        ]);
+        return back();
     }
 
     /**

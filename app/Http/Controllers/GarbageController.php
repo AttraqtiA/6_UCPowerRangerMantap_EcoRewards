@@ -45,13 +45,17 @@ class GarbageController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|max:8|unique:redeem_products',
-            'size' => 'required|numeric',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:5000', // ini untuk validasi file image            'size' => 'required|numeric',
             'description' => 'required',
             'point' => 'required|numeric',
         ], [
             'name.required' => 'Nama wajib diisi!',
             'name.max' => 'Maksimal :max karakter!',
             'name.unique' => 'Jenis sampah sudah ada!',
+            'image.required' => 'Foto sampah wajib diisi!',
+            'image.image' => 'File wajib berupa gambar!',
+            'image.mimes' => 'Hanya diperbolehkan dalam bentuk jpeg, png, jpg!',
+            'image.max' => 'Maksimal 5 mb',
             'size.required' => 'Size wajib diisi!',
             'size.numeric' => 'Size wajib berupa angka!',
             'description.required' => 'Deskripsi wajib diisi!',
@@ -106,7 +110,7 @@ class GarbageController extends Controller
         $garbage = Garbage::where("id", $id)->first();
 
         return view('GarbageBank.GarbageEditPage', [
-            "garbageName" => $garbage->name,
+            "garbage" => $garbage,
             "description" => "Harap isi semuanya."
         ]);
     }
