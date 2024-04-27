@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
-@section('content')
-halo, menunggu landing page
+@section('content_page')
+
+
+
 @endsection
