@@ -64,7 +64,7 @@ Route::patch('/garbageList/{garbage}', [GarbageController::class, 'update'])->na
 Route::delete('/garbageList/{garbage}', [GarbageController::class, 'destroy'])->name('garbageList.destroy');
 
 
-
+Route::get('/visitorHomepage', [RedeemTransactionController::class, 'index'])->name('redeemTransaction.index');
 
 
 // Redeemer ROLE ======================================================================================================
