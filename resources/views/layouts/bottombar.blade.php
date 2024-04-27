@@ -9,35 +9,35 @@
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Koleksi Poin</h2>
                   <ul class="text-gray-500 font-medium">
                       <li class="mb-4">
-                          <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                          <a href="https://www.surabayazoo.co.id/" target="_blank" class="hover:underline">Daur Ulang</a>
                       </li>
                       <li>
-                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                          <a href="https://www.surabayazoo.co.id/" target="_blank" class="hover:underline">Misi Harian</a>
                       </li>
                   </ul>
               </div>
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Hubungi Kami</h2>
                   <ul class="text-gray-500font-medium">
                       <li class="mb-4">
-                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                          <a href="https://www.surabayazoo.co.id/" target="_blank" class="hover:underline ">YouTube</a>
                       </li>
                       <li>
-                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                          <a href="https://www.surabayazoo.co.id/" target="_blank" class="hover:underline">Facebook</a>
                       </li>
                   </ul>
               </div>
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Legal</h2>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Fasilitas</h2>
                   <ul class="text-gray-500 font-medium">
                       <li class="mb-4">
-                          <a href="#" class="hover:underline">Privacy Policy</a>
+                          <a href="https://www.surabayazoo.co.id/" target="_blank" class="hover:underline">Spot Foto</a>
                       </li>
                       <li>
-                          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                          <a href="https://www.surabayazoo.co.id/" target="_blank" class="hover:underline">Wahana</a>
                       </li>
                   </ul>
               </div>
