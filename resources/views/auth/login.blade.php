@@ -51,6 +51,7 @@
                             </div>
                         </div>
 
+
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -65,6 +66,12 @@
                             </div>
                         </div>
                     </form>
+                    <div>
+                        <a href="{{ route('google-auth') }}">
+                            Continue with Google
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
