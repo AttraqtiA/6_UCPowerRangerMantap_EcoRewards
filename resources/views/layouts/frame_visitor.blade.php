@@ -30,9 +30,7 @@
             @include('layouts.topbar_plain')
         </div>
 
-        <div class="bg-neutral-200">
             @yield('content_page')
-        </div>
 
         <div>
             @include('layouts.bottombar')
