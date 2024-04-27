@@ -75,4 +75,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(RedeemTransaction::class, 'user_id', 'id');
     }
+
+    public function userMission(){
+        return $this->hasMany(UserMission::class, 'user_id', 'id');
+    }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Garbage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreGarbageRequest;
 use App\Http\Requests\UpdateGarbageRequest;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
