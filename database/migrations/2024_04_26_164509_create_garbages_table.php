@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('garbages', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable(false);
+            $table->string('name')->nullable(true);
             $table->string('image')->nullable(false);
             $table->string('size')->nullable(false);
             $table->string('description')->nullable(false);

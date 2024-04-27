@@ -1,9 +1,8 @@
-<head>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+@extends('layouts.frame_visitor')
 
-<section style="background-color: #3DB743">
-    <div class="text-center p-10">
+@section('content_page')
+<section class="bg-green-500 py-16">
+    <div class="text-center">
         <h1 class="font-bold text-4xl text-white mb-4">List Produk Tersedia</h1>
         <h1 class="text-3xl text-white">Tailwind CSS</h1>
     </div>
@@ -90,3 +89,5 @@
 
     </section>
 </section>
+
+@endsection

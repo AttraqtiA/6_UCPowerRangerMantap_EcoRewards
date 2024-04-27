@@ -15,4 +15,9 @@ class UserMisi extends Model
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+
+    public function misi()
+    {
+        return $this->belongsTo(Misi::class, 'misi_id', 'id');
+    }
 }

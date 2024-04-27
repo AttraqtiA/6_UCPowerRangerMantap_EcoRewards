@@ -17,7 +17,7 @@
         @else
             <div class="hidden md:flex items-center">
                 <img class="w-10 h-10 rounded-full object-cover"
-                    src="{{ asset('images/' . Auth::user()->profile_picture) }}" alt="user photo">
+                    src="/images/account_circle.png" alt="user photo">
             </div>
         @endguest
         <button

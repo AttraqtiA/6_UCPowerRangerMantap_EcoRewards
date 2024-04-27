@@ -75,7 +75,7 @@ class LoginController extends Controller
             return redirect()->route('/'); // TIDAK PERLU SLASH / soalnya udah ->name('home') di routes/web.php, mau ke student_list udh kuset sih
         } else if (Auth::attempt($member, true)) {
             $this->isLogin(Auth::id());
-            return redirect()->route('/');
+            return redirect()->route('redeemTransaction.VisitorHomePage');
         }
 
         return redirect()->route('login')->with('error', 'Email atau password salah!');

@@ -20,7 +20,7 @@ use App\Http\Controllers\RedeemTransactionController;
 |
 */
 Route::get('/', function () {
-    return view('user.view_katalogProduk');
+    return view('index');
 });
 
 // return view('admin.admin_detail.redeemableProductDetail');
@@ -56,15 +56,15 @@ Route::get('/garbageTransactions/create', [GarbageTransactionController::class, 
 Route::post('/garbageTransactions/{garbageTransaction}', [GarbageTransactionController::class, 'store'])->name('garbageTransactions.store');
 
 Route::get('/garbageList', [GarbageController::class, 'index'])->name('garbageList.index');
-Route::get('/garbageList/{garbage}', [GarbageController::class, 'show'])->name('garbageList.show');
 Route::get('/garbageList/create', [GarbageController::class, 'create'])->name('garbageList.create');
+Route::get('/garbageList/{garbage}', [GarbageController::class, 'show'])->name('garbageList.show');
 Route::post('/garbageList', [GarbageController::class, 'store'])->name('garbageList.store');
 Route::post('/garbageList/{garbage}/edit', [GarbageController::class, 'store'])->name('garbageList.edit');
 Route::patch('/garbageList/{garbage}', [GarbageController::class, 'update'])->name('garbageList.update');
 Route::delete('/garbageList/{garbage}', [GarbageController::class, 'destroy'])->name('garbageList.destroy');
 
 
-Route::get('/visitorHomepage', [RedeemTransactionController::class, 'index'])->name('redeemTransaction.index');
+Route::get('/visitorHomepage', [RedeemTransactionController::class, 'index'])->name('redeemTransaction.VisitorHomePage');
 
 
 // Redeemer ROLE ======================================================================================================
@@ -73,6 +73,7 @@ Route::group([
     'prefix' => 'redeemer',
     'as' => 'redeemer.'
 ], function () {
+
 });
 
 // Member ROLE ======================================================================================================

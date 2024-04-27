@@ -94,12 +94,11 @@ class GarbageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
-    {
-        $garbage = Garbage::find($id);
+    public function show($id) {
+        $garbage = Garbage::where("id", $id)->first();
+
         return view('GarbageBank.GarbageDetailPage', [
-            "TabTitle" => $garbage->name,
-            "garbage" => $garbage,
+            "garbage" => $garbage
         ]);
     }
 

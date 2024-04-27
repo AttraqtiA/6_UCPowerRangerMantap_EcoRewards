@@ -30,8 +30,8 @@ class UserSeeder extends Seeder
         User::create([
             'user_name' => 'Oppy',
             'role_id' => 2,
-            'is_login' => '0',
-            'is_active' => '1',
+            'isLogin' => '0',
+            'isActive' => '1',
             'email' => 'admin_lisahwan@gmail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('adminLisahwan88'),

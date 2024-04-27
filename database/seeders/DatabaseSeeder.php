@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             RedeemProductSeeder::class,
-            // UserSeeder::class,
+            RoleSeeder::class,
+            UserSeeder::class,
 
             // ProductionSeeder::class,
         ]);
