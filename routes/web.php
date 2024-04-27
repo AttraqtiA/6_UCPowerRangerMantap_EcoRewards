@@ -21,7 +21,7 @@ use App\Http\Controllers\RedeemTransactionController;
 */
 
 Route::get('/', function () {
-    return view('user.visitor_homepage');
+    return view('user.view_katalogProduk');
     // return view('index');
 });
 
@@ -63,17 +63,12 @@ Route::get('/garbageTransactions', [GarbageTransactionController::class, 'index'
 Route::get('/garbageTransactions/create', [GarbageTransactionController::class, 'create'])->name('garbageTransactions.create');
 Route::post('/garbageTransactions/{garbageTransaction}', [GarbageTransactionController::class, 'store'])->name('garbageTransactions.store');
 
-Route::get('/garbageList', [GarbageController::class, 'index'])->name('garbageList.index');
-Route::get('/garbageList/create', [GarbageController::class, 'create'])->name('garbageList.create');
-Route::get('/garbageList/{garbage}', [GarbageController::class, 'show'])->name('garbageList.show');
-Route::post('/garbageList', [GarbageController::class, 'store'])->name('garbageList.store');
-Route::post('/garbageList/{garbage}/edit', [GarbageController::class, 'store'])->name('garbageList.edit');
-Route::patch('/garbageList/{garbage}', [GarbageController::class, 'update'])->name('garbageList.update');
-Route::delete('/garbageList/{garbage}', [GarbageController::class, 'destroy'])->name('garbageList.destroy');
-
 // no controller
-Route::get('/visitorHomepage', [RedeemTransactionController::class, 'index'])->name('visitor.homepage');
-Route::get('/katalogProduk', [RedeemTransactionController::class, 'show'])->name('visitor.katalogProduk');
+Route::get('/katalogProduk', [RedeemProductController::class, 'index_2'])->name('visitor.katalogProduk');
+Route::post('/katalogProduk', [RedeemTransactionController::class, 'beliProduk'])->name('visitor.beliProduk');
+Route::get('/katalogProduk/{produk_id}', [RedeemProductController::class, 'show_2'])->name('visitor.detailProduk');
+Route::get('/visitorHomepage', [GarbageTransactionController::class, 'index'])->name('visitor.homepage');
+
 
 // Redeemer ROLE ======================================================================================================
 Route::group([

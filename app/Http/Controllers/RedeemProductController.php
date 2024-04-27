@@ -27,6 +27,14 @@ class RedeemProductController extends Controller
         ]);
     }
 
+    public function index_2(Request $request)
+    {
+        $redeemProducts = RedeemProduct::paginate(6);
+         return view('user.view_katalogProduk', [
+            "redeemProducts" => $redeemProducts
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -91,6 +99,19 @@ class RedeemProductController extends Controller
             "redeemProduct" => $redeemProduct,
         ]);
     }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show_2($id)
+    {
+        $redeemProduct = RedeemProduct::where('id', $id)->first();
+        return view('user.view_produkDetail', [
+            "TabTitle" => $redeemProduct->name,
+            "redeemProduct" => $redeemProduct,
+        ]);
+    }
+
 
     /**
      * Show the form for editing the specified resource.

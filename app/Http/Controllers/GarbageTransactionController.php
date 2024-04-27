@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\GarbageCart;
 use App\Models\GarbageTransaction;
@@ -16,10 +17,21 @@ class GarbageTransactionController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $garbageTransaction = GarbageTransaction::where('user_id', Auth::user()->id)->get();
+        $totalQuantity = $garbageTransaction->sum('total_quantity');
+        $totalPoint = $garbageTransaction->sum('total_point');
+        $lastGarbageTransaction = $garbageTransaction->last();
+
+        return view('user.visitor_homepage' , [
+            "nama" => Auth::user()->user_name,
+            "totalPoint" => $totalPoint,
+            "totalQuantity" => $totalQuantity,
+            "lastDate" => $lastGarbageTransaction->date
+        ]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -73,7 +85,7 @@ class GarbageTransactionController extends Controller
 
         $garbageCart_user->delete();
 
-        return redirect()->route('products')->with('coinExchange_success', 'Penukaran koin berhasil! Silakan <a href="#" class="inline-flex items-center font-bold text-yellow-500">Check Status Pesanan <svg class="ml-1 w-4 h-4 text-yellow-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M1 5h12m0 0L9 1m4 4L9 9" /> </svg></a>');
+        return redirect()->route('products')->with('coinExchange_success', 'Penukaran koin berhasil!');
     }
 
     /**

@@ -18,7 +18,6 @@ return new class extends Migration
             $table->integer('total_quantity')->nullable(false);
             $table->integer('total_point')->nullable(false);
             $table->dateTime('date')->nullable(false);
-            $table->string('acceptedBy')->nullable(false);
             $table->enum('isApproved', ['0', '1'])->default('0');
             $table->timestamps();
         });

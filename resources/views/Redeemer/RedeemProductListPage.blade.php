@@ -104,7 +104,7 @@
                 <nav class="flex flex-col md:flex-row justify-end items-center space-y-3 md:space-y-0 p-4"
                     aria-label="Table navigation">
 
-                    {{-- {{ $orders->links('vendor.pagination.tailwind') }} --}}
+                    {{ $orders->links('vendor.pagination.tailwind') }}
 
                 </nav>
             </div>

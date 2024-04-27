@@ -4,7 +4,7 @@
     <section class="w-screen pt-16">
         <div class="rounded-2xl h-64 w-screen bg-no-repeat object-fit bg-[url('/images/laptop_people.png')]">
             <div class="px-4 pl-24 pt-10">
-                <h1 class="mb-2 text-3xl font-bold tracking-tight leading-none text-white">Halo Yobel!
+                <h1 class="mb-2 text-3xl font-bold tracking-tight leading-none text-white">Halo {{ $nama }}!
                 </h1>
                 <p class="mb-8 text-xl font-semibold tracking-tight leading-none text-white">Ayo lakukan penukaran sampah
                     lagi
@@ -17,7 +17,7 @@
                     class="flex items-center pl-4 h-24 w-64 block max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <div>
                         <p class="font-normal mb-1 text-gray-700 dark:text-gray-400">Total Poin</p>
-                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">200 Poin</h5>
+                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ $totalPoint }} Poin</h5>
                     </div>
                 </a>
 
@@ -25,7 +25,7 @@
                     class="flex items-center pl-4 h-24 w-64 block max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <div>
                         <p class="font-normal mb-1 text-gray-700 dark:text-gray-400">Total Sampah Tertukar</p>
-                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">20 Sampah</h5>
+                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ $totalQuantity }} Sampah</h5>
                     </div>
                 </a>
 
@@ -34,7 +34,7 @@
                     class="flex items-center pl-4 h-24 w-64 block max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <div>
                         <p class="font-normal mb-1 text-gray-700 dark:text-gray-400">Tanggal Terakhir Menukar</p>
-                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">20-April-2024
+                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ $lastExchangeDate }}
                         </h5>
                     </div>
                 </a>
