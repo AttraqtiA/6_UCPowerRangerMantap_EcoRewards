@@ -48,7 +48,7 @@ Route::get('/garbageList/create', [GarbageController::class, 'create'])->name('g
 Route::get('/garbageList/{garbage}', [GarbageController::class, 'show'])->name('garbageList.show');
 Route::patch('/garbageList/{garbage}', [GarbageController::class, 'update'])->name('garbageList.update');
 Route::delete('/garbageList/{garbage}', [GarbageController::class, 'destroy'])->name('garbageList.destroy');
-Route::post('/garbageList/{garbage}/edit', [GarbageController::class, 'store'])->name('garbageList.edit');
+Route::get('/garbageList/{garbage}/edit', [GarbageController::class, 'store'])->name('garbageList.edit');
 
 Route::get('/redeemProducts', [RedeemProductController::class, 'index'])->name('redeemProduct.index'); // CHECKED
 Route::post('/redeemProducts', [RedeemProductController::class, 'store'])->name('redeemProduct.store');

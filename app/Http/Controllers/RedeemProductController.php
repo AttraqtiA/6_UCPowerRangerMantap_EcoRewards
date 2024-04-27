@@ -141,8 +141,8 @@ class RedeemProductController extends Controller
         $redeemProduct = RedeemProduct::where('id', $id)->first();
 
         if ($request->file('image')) {
-            if ($request->oldImage) {
-                Storage::disk('public')->delete($request->oldImage);
+            if ($request->oldimage) {
+                Storage::disk('public')->delete($request->oldimage);
             }
             $validatedData['image'] = $request->file('image')->store('upload_RedeemProduct_images', ['disk' => 'public']);
 
@@ -176,6 +176,6 @@ class RedeemProductController extends Controller
             Storage::disk('public')->delete($redeemProduct->image);
         }
         $redeemProduct->delete();
-        return back()->with('deleteRedeemProduct_success', 'Produk berhasil dihapus!');
+        return redirect()->route('redeemProduct.index');
     }
 }
