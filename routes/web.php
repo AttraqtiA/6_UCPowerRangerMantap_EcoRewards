@@ -20,7 +20,7 @@ use App\Http\Controllers\RedeemTransactionController;
 |
 */
 Route::get('/', function () {
-    return view('user.visitor_homepage');
+    return view('user.view_katalogProduk');
 });
 
 // return view('admin.admin_detail.redeemableProductDetail');
