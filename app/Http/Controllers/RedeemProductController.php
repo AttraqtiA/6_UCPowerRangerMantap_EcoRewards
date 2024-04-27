@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RedeemProduct;
 use Illuminate\Http\Request;
+use App\Models\RedeemProduct;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreRedeemProductRequest;
 use App\Http\Requests\UpdateRedeemProductRequest;
 
@@ -29,12 +30,9 @@ class RedeemProductController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
-        return view('Redeemer.RedeemProductAddPage', [
-            "title" => "Buat Produk",
-            "description" => "Harap isi semuanya."
-        ]);
+        return view('welcome');
     }
 
     /**
@@ -61,7 +59,6 @@ class RedeemProductController extends Controller
             'price_point.numeric' => 'Point wajib berupa angka!',
             'stock.required' => 'Stock wajib diisi!',
             'stock.numeric' => 'Stock wajib berupa angka!',
-
         ]);
 
         // cek apakah ada inputan file berupa image, kalau ada file image dimasukkan ke folder image di public lalu pathnya masuk ke database
@@ -98,7 +95,7 @@ class RedeemProductController extends Controller
      */
     public function show($id)
     {
-        $redeemProduct = RedeemProduct::find($id);
+        $redeemProduct = RedeemProduct::where('id', $id)->first();
         return view('Redeemer.RedeemProductDetailPage', [
             "TabTitle" => $redeemProduct->name,
             "redeemProduct" => $redeemProduct,
