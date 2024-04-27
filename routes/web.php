@@ -21,8 +21,8 @@ use App\Http\Controllers\RedeemTransactionController;
 */
 
 Route::get('/', function () {
-    // return view('Redeemer.RedeemProductAddPage');
-    return view('index');
+    return view('user.visitor_homepage');
+    // return view('index');
 });
 
 // return view('admin.admin_detail.redeemableProductDetail');
@@ -99,7 +99,6 @@ Route::group([
 
 
 
-
-// Auth::routes();
+Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
