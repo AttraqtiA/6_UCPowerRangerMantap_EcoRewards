@@ -42,27 +42,27 @@ Route::group([
 
 
 
+Route::get('/garbageList', [GarbageController::class, 'index'])->name('garbageList.index');
+Route::post('/garbageList', [GarbageController::class, 'store'])->name('garbageList.store');
+Route::get('/garbageList/create', [GarbageController::class, 'create'])->name('garbageList.create');
+Route::get('/garbageList/{garbage}', [GarbageController::class, 'show'])->name('garbageList.show');
+Route::patch('/garbageList/{garbage}', [GarbageController::class, 'update'])->name('garbageList.update');
+Route::delete('/garbageList/{garbage}', [GarbageController::class, 'destroy'])->name('garbageList.destroy');
+Route::post('/garbageList/{garbage}/edit', [GarbageController::class, 'store'])->name('garbageList.edit');
 
 Route::get('/redeemProducts', [RedeemProductController::class, 'index'])->name('redeemProduct.index'); // CHECKED
-    Route::get('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'show'])->name('redeemProduct.show'); //CHECKED
-    Route::get('/redeemProducts/create', [RedeemProductController::class, 'create'])->name('redeemProduct.create');
-    Route::post('/redeemProducts', [RedeemProductController::class, 'store'])->name('redeemProduct.store');
-    Route::post('/redeemProducts/{redeemProduct}/edit', [RedeemProductController::class, 'edit'])->name('redeemProduct.edit');
-    Route::patch('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'update'])->name('redeemProduct.update');
-    Route::delete('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'destroy'])->name('redeemProduct.destroy');
+Route::post('/redeemProducts', [RedeemProductController::class, 'store'])->name('redeemProduct.store');
+Route::get('/redeemProducts/create', [RedeemProductController::class, 'create'])->name('redeemProduct.create');
+Route::get('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'show'])->name('redeemProduct.show'); //CHECKED
+Route::patch('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'update'])->name('redeemProduct.update');
+Route::delete('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'destroy'])->name('redeemProduct.destroy');
+Route::post('/redeemProducts/{redeemProduct}/edit', [RedeemProductController::class, 'edit'])->name('redeemProduct.edit');
 
-    Route::get('/redeemTransactions', [RedeemTransactionController::class, 'index'])->name('redeemTransaction.index');
-    Route::get('/garbageTransactions', [GarbageTransactionController::class, 'index'])->name('garbageTransactions.index'); // ADMIN DASHBOARD
-    Route::get('/garbageTransactions/create', [GarbageTransactionController::class, 'create'])->name('garbageTransactions.create');
-    Route::post('/garbageTransactions/{garbageTransaction}', [GarbageTransactionController::class, 'store'])->name('garbageTransactions.store');
+Route::get('/redeemTransactions', [RedeemTransactionController::class, 'index'])->name('redeemTransaction.index');
+Route::get('/garbageTransactions', [GarbageTransactionController::class, 'index'])->name('garbageTransactions.index'); // ADMIN DASHBOARD
+Route::post('/garbageTransactions/{garbageTransaction}', [GarbageTransactionController::class, 'store'])->name('garbageTransactions.store');
+Route::get('/garbageTransactions/create', [GarbageTransactionController::class, 'create'])->name('garbageTransactions.create');
 
-    Route::get('/garbageList', [GarbageController::class, 'index'])->name('garbageList.index');
-    Route::get('/garbageList/{garbage}', [GarbageController::class, 'show'])->name('garbageList.show');
-    Route::get('/garbageList/create', [GarbageController::class, 'create'])->name('garbageList.create');
-    Route::post('/garbageList', [GarbageController::class, 'store'])->name('garbageList.store');
-    Route::post('/garbageList/{garbage}/edit', [GarbageController::class, 'store'])->name('garbageList.edit');
-    Route::patch('/garbageList/{garbage}', [GarbageController::class, 'update'])->name('garbageList.update');
-    Route::delete('/garbageList/{garbage}', [GarbageController::class, 'destroy'])->name('garbageList.destroy');
 
 
 
@@ -74,7 +74,6 @@ Route::group([
     'prefix' => 'redeemer',
     'as' => 'redeemer.'
 ], function () {
-
 });
 
 // Member ROLE ======================================================================================================
