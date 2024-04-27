@@ -24,7 +24,7 @@
                     <div class="w-full md:w-1/3">
                         <form class="flex items-center" method="GET">
 
-                            <label for="simple-search" class="sr-only">Search</label>
+                            <label for="simple-search" class="sr-only">Cari</label>
                             <div class="relative w-full">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                     <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor"
@@ -39,7 +39,7 @@
                             </div>
 
                             <button type="submit" class="bg-yellow-500 ml-2 p-2 rounded-lg text-sm">
-                                <p class="font-semibold text-white px-2">Search</p>
+                                <p class="font-semibold text-white px-2">Cari</p>
                             </button>
 
                         </form>

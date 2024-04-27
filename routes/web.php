@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin.create.createGarbageOrder');
+    return view('admin.admin_detail.redeemableProductDetail');
 });
 
 // Auth::routes();
