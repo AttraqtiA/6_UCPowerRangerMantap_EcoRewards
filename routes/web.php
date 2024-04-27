@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 Route::get('/', function () {
-    return view('user.visitor_homepage');
+    return view('user.view_katalogProduk');
 });
 
 Auth::routes();
