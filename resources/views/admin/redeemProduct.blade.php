@@ -3,18 +3,20 @@
 @section('content_page')
     <!-- Start block -->
     <section style="background-color:#047857;" class="p-2 sm:p-4 antialiased h-full">
-        <div class="mx-auto max-w-screen-2xl pt-24 sm:ml-56">
+        <div class="mx-auto max-w-screen-2xl py-12 sm:ml-56">
             <div class="bg-white relative shadow-md sm:rounded-lg overflow-hidden">
                 <div
                     class="flex flex-col md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                     <div class="flex-1 flex items-center space-x-2">
                         <h5>
-                            <span class="text-gray-500">Semua Data:</span>
+                            <button type="button"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah</button>
+                            <span class="text-gray-500 ml-4">Semua Data:</span>
                             <span class="text-gray-500">2</span>
                         </h5>
                     </div>
                     <div class="text-lg font-bold text-gray-800">
-                        Daftar Riwayat
+                        Daftar Penukaran/Pembelian Produk
                     </div>
                 </div>
                 <div
@@ -61,9 +63,10 @@
                                 <th scope="col" class="p-4">No.</th>
                                 <th scope="col" class="p-4">Tanggal</th>
                                 <th scope="col" class="p-4">Customer</th>
+                                <th scope="col" class="p-4">Email Customer</th>
+                                <th scope="col" class="p-4">Produk</th>
                                 <th scope="col" class="p-4">Total Kuantitas</th>
                                 <th scope="col" class="p-4">Total poin</th>
-                                <th scope="col" class="p-4">Cek</th>
                                 <th scope="col" class="p-4">Status</th>
                             </tr>
                         </thead>
@@ -73,10 +76,17 @@
                                     {{ 1 }}
                                 </td>
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    10 April 2024</td>
+                                    15 April 2024</td>
                                 <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Jason
+                                    Louis
                                 </td>
+
+                                <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                    louis@gmail.com
+                                </td>
+
+                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                    Kaleng Jinjing </td>
 
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                     15 </td>
@@ -84,14 +94,12 @@
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                     150 </td>
 
-                                <td class="py-3 px-4 font-medium text-gray-900 whitespace-nowrap">
+                                <td class="px-4 py-3 font-medium text-green-700 whitespace-nowrap">
                                     <button type="button"
-                                        class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Detail</button>
-
+                                        class="text-red-700  border border-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-green-500 dark:text-green-500">Belum
+                                        dikonfirmasi</button>
                                 </td>
 
-                                <td class="px-4 py-3 font-medium text-green-400 whitespace-nowrap">
-                                    Telah Dikonfirmasi</td>
 
                             </tr>
 
@@ -100,10 +108,17 @@
                                     {{ 2 }}
                                 </td>
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    11 April 2024</td>
+                                    17 April 2024</td>
                                 <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                     Samuel
                                 </td>
+
+                                <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                    samuel@gmail.com
+                                </td>
+
+                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                    Sepatu Jinjing </td>
 
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                     20 </td>
@@ -111,14 +126,12 @@
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                     200 </td>
 
-                                <td class="py-3 px-4 font-medium text-gray-900 whitespace-nowrap">
+                                <td class="px-4 py-3 font-medium text-green-700 whitespace-nowrap">
                                     <button type="button"
-                                        class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Detail</button>
-
+                                        class="text-green-700  border border-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-green-500 dark:text-green-500">Sudah
+                                        dikonfirmasi</button>
                                 </td>
 
-                                <td class="px-4 py-3 font-medium text-green-400 whitespace-nowrap">
-                                    Telah Dikonfirmasi</td>
 
                             </tr>
 
