@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-return view('admin.admin_detail.redeemableProductDetail');
+// return view('admin.admin_detail.redeemableProductDetail');
 
 // TrashBank ROLE ======================================================================================================
 Route::group([
