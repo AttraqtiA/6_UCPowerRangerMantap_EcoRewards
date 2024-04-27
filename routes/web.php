@@ -42,7 +42,6 @@ Route::group([
 
 
 
-
 Route::get('/garbageList', [GarbageController::class, 'index'])->name('garbageList.index');
 Route::post('/garbageList', [GarbageController::class, 'store'])->name('garbageList.store');
 Route::get('/garbageList/create', [GarbageController::class, 'create'])->name('garbageList.create');
@@ -72,7 +71,7 @@ Route::post('/garbageList/{garbage}/edit', [GarbageController::class, 'store'])-
 Route::patch('/garbageList/{garbage}', [GarbageController::class, 'update'])->name('garbageList.update');
 Route::delete('/garbageList/{garbage}', [GarbageController::class, 'destroy'])->name('garbageList.destroy');
 
-
+// no controller
 Route::get('/visitorHomepage', [RedeemTransactionController::class, 'index'])->name('visitor.homepage');
 Route::get('/katalogProduk', [RedeemTransactionController::class, 'show'])->name('visitor.katalogProduk');
 

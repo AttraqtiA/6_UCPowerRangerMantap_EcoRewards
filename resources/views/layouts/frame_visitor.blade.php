@@ -27,7 +27,7 @@
 <body style="font-family: 'Poppins', sans-serif;">
     <div class="flex flex-col">
         <div>
-            @include('layouts.topbar_plain')
+            @include('layouts.topbar_visitor')
         </div>
 
         <div class="bg-neutral-200 pt-16">
