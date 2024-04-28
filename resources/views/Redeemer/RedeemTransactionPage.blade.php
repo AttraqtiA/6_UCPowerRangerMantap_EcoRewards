@@ -71,37 +71,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b hover:bg-gray-100">
-                                <td class="p-4 w-4">
-                                    {{ 1 }}
-                                </td>
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    15 April 2024</td>
-                                <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Louis
-                                </td>
+                            {{-- @foreach ($redeemTransaction as $tx)
 
-                                <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    louis@gmail.com
-                                </td>
+                            @endforeach --}}
 
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Kaleng Jinjing </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    15 </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    150 </td>
-
-                                <td class="px-4 py-3 font-medium text-green-700 whitespace-nowrap">
-                                    <button type="button"
-                                        class="text-red-700  border border-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-green-500 dark:text-green-500">Belum
-                                        dikonfirmasi</button>
-                                </td>
-
-
-                            </tr>
 
                             <tr class="border-b hover:bg-gray-100">
                                 <td class="p-4 w-4">

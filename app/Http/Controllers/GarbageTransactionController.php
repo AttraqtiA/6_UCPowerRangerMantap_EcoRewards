@@ -22,23 +22,35 @@ class GarbageTransactionController extends Controller
         $garbageTransaction = GarbageTransaction::where('user_id', Auth::user()->id)->get();
         $totalQuantity = $garbageTransaction->sum('total_quantity');
         $totalPoint = $garbageTransaction->sum('total_point');
-        $lastGarbageTransaction = $garbageTransaction->last();
 
         return view('user.visitor_homepage' , [
             "nama" => Auth::user()->user_name,
+            "garbageTransactions" => $garbageTransaction,
             "totalPoint" => $totalPoint,
-            "totalQuantity" => $totalQuantity,
-            "lastDate" => $lastGarbageTransaction->date
+            "totalQuantity" => $totalQuantity
         ]);
     }
 
+    public function index_2(Request $request)
+    {
+        $garbageTransaction = GarbageTransaction::where('user_id', Auth::user()->id)->get();
+        $totalQuantity = $garbageTransaction->sum('total_quantity');
+        $totalPoint = $garbageTransaction->sum('total_point');
+
+        return view('GarbageBank.GarbageTransactionPage' , [
+            "nama" => Auth::user()->user_name,
+            "garbageTransactions" => $garbageTransaction,
+            "totalPoint" => $totalPoint,
+            "totalQuantity" => $totalQuantity
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+        return view('GarbageBank.GarbageAddTransactionPage');
     }
 
     /**
@@ -46,46 +58,85 @@ class GarbageTransactionController extends Controller
      */
     public function store(StoreGarbageTransactionRequest $request)
     {
-        $validatedData = $request->validate([
-            "user_name" => "required",
-            "email" => "required"
-        ], [
-            'user_name.required' => 'Nama pengunjung wajib diisi!',
-            'email.required' => 'Email wajib diisi!'
-        ]);
-        $garbageCart = GarbageCart::all();
-        $garbageCart_user = $garbageCart->user->where('user_name', $validatedData['user_name'])
-                                ->where('email', $validatedData['email'])
-                                ->first();
-        $garbageCart = GarbageCart::where('user_id', Auth::user()->id)->first();
-        $garbageCart_details = $garbageCart->garbageCartDetail;
-        $customer = User::where('user_name', $validatedData['user_name'])
-        ->where('email', $validatedData['email'])
-        ->first();
+        // $validatedData = $request->validate([
+        //     "user_name" => "required",
+        //     "email" => "required",
+        //     "quantity" => "required|numeric",
+        //     "point" => "required|numeric"
+        // ], [
+        //     'user_name.required' => 'Nama pengunjung wajib diisi!',
+        //     'email.required' => 'Email wajib diisi!',
+        //     'quantity.required' => 'Jumlah sampah wajib diisi!',
+        //     'quantity.numeric' => 'Jumlah sampah wajib berupa angka!',
+        //     'poin.required' => 'Poin wajib diisi!',
+        //     'poin.numeric' => 'Poin wajib berupa angka!'
+        // ]);
+        // $garbageCart = GarbageCart::all();
+        // $garbageCart_user = $garbageCart->user->where('user_name', $validatedData['user_name'])
+        //     ->where('email', $validatedData['email'])
+        //     ->first();
+        // $customer = User::where('user_name', $validatedData['user_name'])
+        //     ->where('email', $validatedData['email'])
+        //     ->first();
 
-        $total_point = ($garbageCart_details->sum('point'));
-        $total_quantity = $garbageCart_details->sum('quantity');
+        // if (!$customer) {
+        //     return back()->with('nameEmail_error', 'Mohon maaf, nama dan email pengunjung tidak ditemukan!');
+        // } else {
+        //     if (!$garbageCart_user) {
+        //         $garbageCart_new = GarbageCart::create([
+        //             'user_id' => $customer->id
+        //         ]);
+        //         GarbageCartDetail::create([
+        //             'garbageCart_id' => $garbageCart_new,
+        //             'garbage_id' => $request->garbage_id,
+        //             'quantity' => $validatedData['quantity'],
+        //             'point' => $validatedData['point']
+        //         ]);
+        //     } else {
+        //         $garbageCart_detail = $garbageCart_user->garbageCartDetail;
+        //         $garbageCart_detail->update([
+        //             'garbageCart_id' => $garbageCart_user->id,
+        //             'garbage_id' => $request->garbage_id,
+        //             'quantity' => $validatedData['quantity'],
+        //             'point' => $validatedData['point']
+        //         ]);
+        //     }
+        //     return redirect()->route('')->with('addGarbage_success', 'Sampah berhasil ditambahkan!');
+        // }
 
-        $garbageTransaction = GarbageTransaction::create([
-            'user_id' => $customer->id,
-            'total_quantity' => $total_quantity,
-            'total_point' => $total_point,
-            'date' => now(),
-            'acceptedBy' => Auth::user()->user_name
-        ]);
 
-        foreach ($garbageCart_details as $garbageCart_detail) {
-            GarbageTransactionDetail::create([
-                'garbage_id' => $request->garbage_id,
-                'garbageTransaction_id' => $garbageTransaction->id,
-                'quantity' => $garbageCart_detail->quantity,
-                'price' => $garbageCart_detail->price
-            ]);
-        }
 
-        $garbageCart_user->delete();
+        // $garbageCart = GarbageCart::where('user_id', Auth::user()->id)->first();
+        // $garbageCart_details = $garbageCart->garbageCartDetail;
+        // $customer = User::where('user_name', $validatedData['user_name'])
+        // ->where('email', $validatedData['email'])
+        // ->first();
 
-        return redirect()->route('products')->with('coinExchange_success', 'Penukaran koin berhasil!');
+        // $total_point = ($garbageCart_details->sum('point'));
+        // $total_quantity = $garbageCart_details->sum('quantity');
+
+        // $garbageTransaction = GarbageTransaction::create([
+        //     'user_id' => $customer->id,
+        //     'total_quantity' => $total_quantity,
+        //     'total_point' => $total_point,
+        //     'date' => now(),
+        //     'acceptedBy' => Auth::user()->user_name
+        // ]);
+
+        // foreach ($garbageCart_details as $garbageCart_detail) {
+        //     GarbageTransactionDetail::create([
+        //         'garbage_id' => $request->garbage_id,
+        //         'garbageTransaction_id' => $garbageTransaction->id,
+        //         'quantity' => $garbageCart_detail->quantity,
+        //         'price' => $garbageCart_detail->price
+        //     ]);
+        // }
+
+        // $garbageCart_user->delete();
+
+        // return redirect()->route('products')->with('coinExchange_success', 'Penukaran koin berhasil!');
+
+        return view('garbageTransaction.index');
     }
 
     /**

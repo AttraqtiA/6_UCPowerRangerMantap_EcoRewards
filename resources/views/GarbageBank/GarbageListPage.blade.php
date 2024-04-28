@@ -12,7 +12,7 @@
                             <button type="button"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah</button>
                             <span class="ml-4 text-gray-500">Semua Sampah :</span>
-                            <span class="text-gray-500">2</span>
+                            <span class="text-gray-500">{{ count($garbages) }}</span>
                         </h5>
                     </div>
                     <div class="text-lg font-bold text-gray-800">
@@ -68,46 +68,30 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b hover:bg-gray-100">
-                                <td class="p-4 w-4">
-                                    {{ 1 }}
-                                </td>
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Kaleng</td>
-                                <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Kecil
-                                </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    15 </td>
-
-                                <td class="py-3 px-4 font-medium text-gray-900 whitespace-nowrap">
-                                    <button type="button"
-                                        class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Detail</button>
-
-                                </td>
-
-                            </tr>
+                            @foreach ($garbages as $garbage)
 
                             <tr class="border-b hover:bg-gray-100">
                                 <td class="p-4 w-4">
-                                    {{ 2 }}
+                                    {{ $garbage->id }}
                                 </td>
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Plastik</td>
+                                    {{ $garbage->name }}</td>
                                 <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Sedang
+                                    {{ $garbage->size }}
                                 </td>
 
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    1 </td>
+                                    {{ $garbage->point }} </td>
 
                                 <td class="py-3 px-4 font-medium text-gray-900 whitespace-nowrap">
+                                    <a href="{{ route('garbageList.show', ['garbage' => $garbage->id]) }}">
                                     <button type="button"
                                         class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Detail</button>
-
+                                    </a>
                                 </td>
+
                             </tr>
+                            @endforeach
 
                             <!-- drawer component -->
 
@@ -119,7 +103,7 @@
                 <nav class="flex flex-col md:flex-row justify-end items-center space-y-3 md:space-y-0 p-4"
                     aria-label="Table navigation">
 
-                    {{-- {{ $orders->links('vendor.pagination.tailwind') }} --}}
+                    {{ $garbages->links('vendor.pagination.tailwind') }}
 
                 </nav>
             </div>

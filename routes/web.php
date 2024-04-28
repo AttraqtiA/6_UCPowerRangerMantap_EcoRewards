@@ -21,8 +21,8 @@ use App\Http\Controllers\RedeemTransactionController;
 */
 
 Route::get('/', function () {
-    return view('user.view_katalogProduk');
-    // return view('index');
+    // return view('user.viewMission');
+    return view('index');
 });
 
 // return view('admin.admin_detail.redeemableProductDetail');
@@ -59,14 +59,17 @@ Route::patch('/redeemProducts/{redeemProduct}', [RedeemProductController::class,
 Route::delete('/redeemProducts/{redeemProduct}', [RedeemProductController::class, 'destroy'])->name('redeemProduct.destroy');
 
 Route::get('/redeemTransactions', [RedeemTransactionController::class, 'index'])->name('redeemTransaction.index');
-Route::get('/garbageTransactions', [GarbageTransactionController::class, 'index'])->name('garbageTransactions.index'); // ADMIN DASHBOARD
+
+Route::get('/katalogProduk', [RedeemProductController::class, 'index_2'])->name('visitor.katalogProduk');
+Route::post('/katalogProduk', [RedeemTransactionController::class, 'beliProduk'])->name('visitor.beliProduk');
+Route::get('/katalogProduk/{produk_id}', [RedeemProductController::class, 'show_2'])->name('visitor.detailProduk');
+
+Route::get('/garbageTransactions', [GarbageTransactionController::class, 'index_2'])->name('garbageTransactions.index'); // ADMIN DASHBOARD
 Route::get('/garbageTransactions/create', [GarbageTransactionController::class, 'create'])->name('garbageTransactions.create');
 Route::post('/garbageTransactions/{garbageTransaction}', [GarbageTransactionController::class, 'store'])->name('garbageTransactions.store');
 
 // no controller
-Route::get('/katalogProduk', [RedeemProductController::class, 'index_2'])->name('visitor.katalogProduk');
-Route::post('/katalogProduk', [RedeemTransactionController::class, 'beliProduk'])->name('visitor.beliProduk');
-Route::get('/katalogProduk/{produk_id}', [RedeemProductController::class, 'show_2'])->name('visitor.detailProduk');
+
 Route::get('/visitorHomepage', [GarbageTransactionController::class, 'index'])->name('visitor.homepage');
 
 

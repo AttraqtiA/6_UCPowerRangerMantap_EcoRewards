@@ -33,51 +33,51 @@ class GarbageCartController extends Controller
      */
     public function store(Request $request, $id)
     {
-        $validatedData = $request->validate([
-            "user_name" => "required",
-            "email" => "required",
-            "quantity" => "required|numeric",
-            "point" => "required|numeric"
-        ], [
-            'user_name.required' => 'Nama pengunjung wajib diisi!',
-            'email.required' => 'Email wajib diisi!',
-            'quantity.required' => 'Jumlah sampah wajib diisi!',
-            'quantity.numeric' => 'Jumlah sampah wajib berupa angka!',
-            'poin.required' => 'Poin wajib diisi!',
-            'poin.numeric' => 'Poin wajib berupa angka!'
-        ]);
-        $garbageCart = GarbageCart::all();
-        $garbageCart_user = $garbageCart->user->where('user_name', $validatedData['user_name'])
-            ->where('email', $validatedData['email'])
-            ->first();
-        $customer = User::where('user_name', $validatedData['user_name'])
-            ->where('email', $validatedData['email'])
-            ->first();
+        // $validatedData = $request->validate([
+        //     "user_name" => "required",
+        //     "email" => "required",
+        //     "quantity" => "required|numeric",
+        //     "point" => "required|numeric"
+        // ], [
+        //     'user_name.required' => 'Nama pengunjung wajib diisi!',
+        //     'email.required' => 'Email wajib diisi!',
+        //     'quantity.required' => 'Jumlah sampah wajib diisi!',
+        //     'quantity.numeric' => 'Jumlah sampah wajib berupa angka!',
+        //     'poin.required' => 'Poin wajib diisi!',
+        //     'poin.numeric' => 'Poin wajib berupa angka!'
+        // ]);
+        // $garbageCart = GarbageCart::all();
+        // $garbageCart_user = $garbageCart->user->where('user_name', $validatedData['user_name'])
+        //     ->where('email', $validatedData['email'])
+        //     ->first();
+        // $customer = User::where('user_name', $validatedData['user_name'])
+        //     ->where('email', $validatedData['email'])
+        //     ->first();
 
-        if (!$customer) {
-            return back()->with('nameEmail_error', 'Mohon maaf, nama dan email pengunjung tidak ditemukan!');
-        } else {
-            if (!$garbageCart_user) {
-                $garbageCart_new = GarbageCart::create([
-                    'user_id' => $customer->id
-                ]);
-                GarbageCartDetail::create([
-                    'garbageCart_id' => $garbageCart_new,
-                    'garbage_id' => $request->garbage_id,
-                    'quantity' => $validatedData['quantity'],
-                    'point' => $validatedData['point']
-                ]);
-            } else {
-                $garbageCart_detail = $garbageCart_user->garbageCartDetail;
-                $garbageCart_detail->update([
-                    'garbageCart_id' => $garbageCart_user->id,
-                    'garbage_id' => $request->garbage_id,
-                    'quantity' => $validatedData['quantity'],
-                    'point' => $validatedData['point']
-                ]);
-            }
-            return redirect()->route('')->with('addGarbage_success', 'Sampah berhasil ditambahkan!');
-        }
+        // if (!$customer) {
+        //     return back()->with('nameEmail_error', 'Mohon maaf, nama dan email pengunjung tidak ditemukan!');
+        // } else {
+        //     if (!$garbageCart_user) {
+        //         $garbageCart_new = GarbageCart::create([
+        //             'user_id' => $customer->id
+        //         ]);
+        //         GarbageCartDetail::create([
+        //             'garbageCart_id' => $garbageCart_new,
+        //             'garbage_id' => $request->garbage_id,
+        //             'quantity' => $validatedData['quantity'],
+        //             'point' => $validatedData['point']
+        //         ]);
+        //     } else {
+        //         $garbageCart_detail = $garbageCart_user->garbageCartDetail;
+        //         $garbageCart_detail->update([
+        //             'garbageCart_id' => $garbageCart_user->id,
+        //             'garbage_id' => $request->garbage_id,
+        //             'quantity' => $validatedData['quantity'],
+        //             'point' => $validatedData['point']
+        //         ]);
+        //     }
+        //     return redirect()->route('')->with('addGarbage_success', 'Sampah berhasil ditambahkan!');
+        // }
     }
 
     /**

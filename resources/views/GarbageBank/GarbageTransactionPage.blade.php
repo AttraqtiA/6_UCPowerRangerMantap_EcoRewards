@@ -9,8 +9,10 @@
                     class="flex flex-col md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                     <div class="flex-1 flex items-center space-x-2">
                         <h5>
-                            <button type="button"
+                            <a href="{{ route('garbageTransactions.create') }}">
+                                <button type="button"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah</button>
+                            </a>
                             <span class="ml-4 text-gray-500 ml-4">Semua Data:</span>
                             <span class="text-gray-500">2</span>
                         </h5>
@@ -23,7 +25,7 @@
                     class="flex flex-col md:flex-row items-stretch md:items-center md:space-x-3 space-y-3 md:space-y-0 justify-between mx-4 py-4 border-t">
                     <div class="w-full md:w-1/3">
                         <form class="flex items-center" method="GET">
-
+                            @csrf
                             <label for="simple-search" class="sr-only">Cari</label>
                             <div class="relative w-full">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -64,65 +66,37 @@
                                 <th scope="col" class="p-4">Tanggal</th>
                                 <th scope="col" class="p-4">Customer</th>
                                 <th scope="col" class="p-4">Email Customer</th>
-                                <th scope="col" class="p-4">Jenis Sampah</th>
                                 <th scope="col" class="p-4">Total Kuantitas</th>
                                 <th scope="col" class="p-4">Total poin</th>
                             </tr>
                         </thead>
                         <tbody>
+
+                            @foreach ($garbageTransactions as $garbageTransaction)
                             <tr class="border-b hover:bg-gray-100">
                                 <td class="p-4 w-4">
-                                    {{ 1 }}
+                                    {{ $garbageTransaction->id }}
                                 </td>
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    15 April 2024</td>
+                                    {{ $garbageTransaction->date }}</td>
                                 <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Louis
+                                    {{ $garbageTransaction->customer->name }}
                                 </td>
 
                                 <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    louis@gmail.com
+                                    {{ $garbageTransaction->customer->email }}
                                 </td>
 
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Kaleng </td>
+                                    {{ $garbageTransaction->total_quantity }} </td>
 
                                 <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    15 </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    150 </td>
-
-
+                                    {{ $garbageTransaction->total_point }} </td>
 
 
                             </tr>
+                            @endforeach
 
-                            <tr class="border-b hover:bg-gray-100">
-                                <td class="p-4 w-4">
-                                    {{ 2 }}
-                                </td>
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    17 April 2024</td>
-                                <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Samuel
-                                </td>
-
-                                <td scope="row" class="mr-4 px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    samuel@gmail.com
-                                </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    Plastik </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    20 </td>
-
-                                <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                    200 </td>
-
-
-                            </tr>
 
                             <!-- drawer component -->
 
@@ -134,7 +108,7 @@
                 <nav class="flex flex-col md:flex-row justify-end items-center space-y-3 md:space-y-0 p-4"
                     aria-label="Table navigation">
 
-                    {{-- {{ $orders->links('vendor.pagination.tailwind') }} --}}
+                    {{-- {{ $garbageTransactions->links('vendor.pagination.tailwind') }} --}}
 
                 </nav>
             </div>

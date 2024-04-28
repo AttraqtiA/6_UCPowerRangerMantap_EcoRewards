@@ -14,7 +14,7 @@
                                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah</button>
                             </a>
                             <span class="ml-4 text-gray-500">Semua Produk :</span>
-                            <span class="text-gray-500">2</span>
+                            <span class="text-gray-500">{{ count($redeemProducts) }}</span>
                         </h5>
                     </div>
                     <div class="text-lg font-bold text-gray-800">
@@ -104,7 +104,7 @@
                 <nav class="flex flex-col md:flex-row justify-end items-center space-y-3 md:space-y-0 p-4"
                     aria-label="Table navigation">
 
-                    {{ $orders->links('vendor.pagination.tailwind') }}
+                    {{ $redeemProducts->links('vendor.pagination.tailwind') }}
 
                 </nav>
             </div>
