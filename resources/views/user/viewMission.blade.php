@@ -1,144 +1,144 @@
-@extends('layouts.frame_visitor')
+@extends('layouts.admin.frame_admin')
 
 @section('content_page')
-<section class="object-cover bg-repeat bg-[url('/image/Group19.png')]">
-    <div class="text-center p-10">
-        <h1 class="font-bold text-5xl text-white mb-4">Misi yang tersedia</h1>
-        <h1 class="text-3xl text-white">Silahkan mengerjakan untuk mendapatkan poin</h1>
-    </div>
-    <section id="Projects"
-        class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify- gap-y-20 gap-x-14 mt-10 mb-5">
-
-        <div
-            class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface">
-            <div class="p-6">
-                <h5 class="mb-3 text-xl font-medium leading-tight">
-                   Foto dengan pose gaya monyet
-                </h5>
-                <p class="mb-3 text-base">
-                    Menunjukkan karakteristik monyet dalam pose foto
-                </p>
-                <div class="md:col-span-5 mb-4">
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="user_avatar">Pengumpulan : </label>
-                    <input
-                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                        aria-describedby="user_avatar_help" id="user_avatar" type="file">
-                </div>
-                <button type="button"
-                    class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
-            </div>
+    <section class="object-cover bg-repeat bg-[url('/images/Group19.png')]">
+        <div class="text-center p-10">
+            <h1 class="font-bold text-5xl text-white mb-4">Misi yang tersedia</h1>
+            <h1 class="text-3xl text-white">Silahkan mengerjakan untuk mendapatkan poin</h1>
         </div>
+        <section id="Projects"
+            class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify- gap-y-20 gap-x-14 mt-10 mb-5">
 
-        <div
-            class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface">
-            <div class="p-6">
-                <h5 class="mb-3 text-xl font-medium leading-tight">
-                    Berfoto dengan pasangan di depan burung unta
-                </h5>
-                <p class="mb-3 text-base">
-                    Lokasi : area Afrika
-                </p>
-                <div class="md:col-span-5 mb-4">
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="user_avatar">Pengumpulan : </label>
-                    <input
-                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                        aria-describedby="user_avatar_help" id="user_avatar" type="file">
+            <div
+                class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1">
+                <div class="p-6">
+                    <h5 class="mb-3 text-xl text-black font-medium leading-tight">
+                        Foto dengan pose gaya monyet
+                    </h5>
+                    <p class="mb-3 text-base">
+                        Menunjukkan karakteristik monyet dalam pose foto
+                    </p>
+                    <div class="md:col-span-5 mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="user_avatar">Pengumpulan : </label>
+                        <input
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                            aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                    </div>
+                    <button type="button"
+                        class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
                 </div>
-                <button type="button"
-                    class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
             </div>
-        </div>
 
-
-        <div
-            class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface">
-            <div class="p-6">
-                <h5 class="mb-3 text-xl font-medium leading-tight">
-                   Memberi makan jerapah
-                </h5>
-                <p class="mb-3 text-base">
-                    Dalam foto harus terlihat keepernya
-                </p>
-                <div class="md:col-span-5 mb-4">
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="user_avatar">Pengumpulan : </label>
-                    <input
-                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                        aria-describedby="user_avatar_help" id="user_avatar" type="file">
+            <div
+                class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1">
+                <div class="p-6">
+                    <h5 class="mb-3 text-xl font-medium leading-tight">
+                        Berfoto dengan pasangan di depan burung unta
+                    </h5>
+                    <p class="mb-3 text-base">
+                        Lokasi : area Afrika
+                    </p>
+                    <div class="md:col-span-5 mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="user_avatar">Pengumpulan : </label>
+                        <input
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                            aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                    </div>
+                    <button type="button"
+                        class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
                 </div>
-                <button type="button"
-                    class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
             </div>
-        </div>
 
 
-        <div
-            class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface">
-            <div class="p-6">
-                <h5 class="mb-3 text-xl font-medium leading-tight">
-                    Temukan 5 sampah botol plastik kosong
-                </h5>
-                <p class="mb-3 text-base">
-                    Upload foto sampah menjadi 1 gambar
-                </p>
-                <div class="md:col-span-5 mb-4">
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="user_avatar">Pengumpulan : </label>
-                    <input
-                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                        aria-describedby="user_avatar_help" id="user_avatar" type="file">
+            <div
+                class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1">
+                <div class="p-6">
+                    <h5 class="mb-3 text-xl font-medium leading-tight">
+                        Memberi makan jerapah
+                    </h5>
+                    <p class="mb-3 text-base">
+                        Dalam foto harus terlihat keepernya
+                    </p>
+                    <div class="md:col-span-5 mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="user_avatar">Pengumpulan : </label>
+                        <input
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                            aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                    </div>
+                    <button type="button"
+                        class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
                 </div>
-                <button type="button"
-                    class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
             </div>
-        </div>
 
 
-        <div
-            class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface">
-            <div class="p-6">
-                <h5 class="mb-3 text-xl font-medium leading-tight">
-                    Coba wahana perahu
-                </h5>
-                <p class="mb-3 text-base">
-                   Foto diatas perahu
-                </p>
-                <div class="md:col-span-5 mb-4">
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="user_avatar">Pengumpulan : </label>
-                    <input
-                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                        aria-describedby="user_avatar_help" id="user_avatar" type="file">
+            <div
+                class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1">
+                <div class="p-6">
+                    <h5 class="mb-3 text-xl font-medium leading-tight">
+                        Temukan 5 sampah botol plastik kosong
+                    </h5>
+                    <p class="mb-3 text-base">
+                        Upload foto sampah menjadi 1 gambar
+                    </p>
+                    <div class="md:col-span-5 mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="user_avatar">Pengumpulan : </label>
+                        <input
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                            aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                    </div>
+                    <button type="button"
+                        class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
                 </div>
-                <button type="button"
-                    class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
             </div>
-        </div>
 
 
-        <div
-            class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface">
-            <div class="p-6">
-                <h5 class="mb-3 text-xl font-medium leading-tight">
-                    Foto bersama pasangan di lorong hati KBS
-                </h5>
-                <p class="mb-3 text-base">
-                    Lokasi : Dekat plaza atau area Afrika
-                </p>
-                <div class="md:col-span-5 mb-4">
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        for="user_avatar">Pengumpulan : </label>
-                    <input
-                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                        aria-describedby="user_avatar_help" id="user_avatar" type="file">
+            <div
+                class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1">
+                <div class="p-6">
+                    <h5 class="mb-3 text-xl font-medium leading-tight">
+                        Coba wahana perahu
+                    </h5>
+                    <p class="mb-3 text-base">
+                        Foto diatas perahu
+                    </p>
+                    <div class="md:col-span-5 mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="user_avatar">Pengumpulan : </label>
+                        <input
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                            aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                    </div>
+                    <button type="button"
+                        class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
                 </div>
-                <button type="button"
-                    class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
             </div>
-        </div>
 
+
+            <div
+                class="block flex justify-center items-center max-w-[20rem] h-72 rounded-lg bg-white text-center shadow-secondary-1">
+                <div class="p-6">
+                    <h5 class="mb-3 text-xl font-medium leading-tight">
+                        Foto bersama pasangan di lorong hati KBS
+                    </h5>
+                    <p class="mb-3 text-base">
+                        Lokasi : Dekat plaza atau area Afrika
+                    </p>
+                    <div class="md:col-span-5 mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="user_avatar">Pengumpulan : </label>
+                        <input
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                            aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                    </div>
+                    <button type="button"
+                        class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
+                </div>
+            </div>
+
+        </section>
     </section>
-</section>
 @endsection

@@ -34,11 +34,11 @@ class RedeemTransactionController extends Controller
      */
     public function index()
     {
-        //
-        // $redeemTransaction = RedeemTransaction::all();
-        // return view('Redeemer.RedeemTransactionPage', [
-        //     "redeemTransactions" => $redeemTransaction
-        // ]);
+
+        $redeemTransaction = RedeemTransaction::all();
+        return view('Redeemer.RedeemTransactionPage', [
+            "redeemTransactions" => $redeemTransaction
+        ]);
     }
 
     /**

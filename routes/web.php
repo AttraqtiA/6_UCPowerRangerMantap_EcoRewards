@@ -25,6 +25,16 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/misi', function () {
+    // return view('user.viewMission');
+    return view('user.viewMission');
+});
+
+Route::get('/buatMisi', function () {
+    // return view('user.viewMission');
+    return view('user.viewMission');
+});
+
 // return view('admin.admin_detail.redeemableProductDetail');
 
 // TrashBank ROLE ======================================================================================================
@@ -71,7 +81,6 @@ Route::post('/garbageTransactions/{garbageTransaction}', [GarbageTransactionCont
 // no controller
 
 Route::get('/visitorHomepage', [GarbageTransactionController::class, 'index'])->name('visitor.homepage');
-
 
 // Redeemer ROLE ======================================================================================================
 Route::group([

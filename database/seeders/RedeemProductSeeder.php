@@ -14,50 +14,43 @@ class RedeemProductSeeder extends Seeder
     public function run(): void
     {
         RedeemProduct::create([
-            'name' => 'Teri Oven',
-            'image' => 'DendengBalado.JPG',
+            'name' => 'Recycle Product',
+            'image' => 'recycleProduct.JPG',
             'description' => 61000,
             'price_point' => 50,
             'stock' => 150
         ]);
         RedeemProduct::create([
-            'name' => 'Teri Oven',
-            'image' => 'DendengBalado.JPG',
+            'name' => 'Recycle Product',
+            'image' => 'recycleProduct.JPG',
             'description' => 61000,
             'price_point' => 50,
             'stock' => 150
         ]);
         RedeemProduct::create([
-            'name' => 'Teri Oven',
-            'image' => 'DendengBalado.JPG',
+            'name' => 'Recycle Product',
+            'image' => 'recycleProduct.JPG',
             'description' => 61000,
             'price_point' => 50,
             'stock' => 150
         ]);
         RedeemProduct::create([
-            'name' => 'Teri Oven',
-            'image' => 'DendengBalado.JPG',
+            'name' => 'Recycle Product',
+            'image' => 'recycleProduct.JPG',
             'description' => 61000,
             'price_point' => 50,
             'stock' => 150
         ]);
         RedeemProduct::create([
-            'name' => 'Teri Oven',
-            'image' => 'DendengBalado.JPG',
+            'name' => 'Recycle Product',
+            'image' => 'recycleProduct.JPG',
             'description' => 61000,
             'price_point' => 50,
             'stock' => 150
         ]);
         RedeemProduct::create([
-            'name' => 'Teri Oven',
-            'image' => 'DendengBalado.JPG',
-            'description' => 61000,
-            'price_point' => 50,
-            'stock' => 150
-        ]);
-        RedeemProduct::create([
-            'name' => 'Teri Oven',
-            'image' => 'DendengBalado.JPG',
+            'name' => 'Recycle Product',
+            'image' => 'recycleProduct.JPG',
             'description' => 61000,
             'price_point' => 50,
             'stock' => 150

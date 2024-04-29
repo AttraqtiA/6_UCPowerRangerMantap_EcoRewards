@@ -9,7 +9,7 @@
                     <div class="lg:w-4/5 mx-auto flex flex-wrap">
 
                         <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
-                            src="{{ asset('/storage' . $redeemProduct->image) }}">
+                            src="{{ asset('storage/upload_RedeemProduct_images/' . $redeemProduct->image) }}">
                         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                             <h2 class="text-sm title-font text-gray-500 tracking-widest">Detail Produk</h2>
                             <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{ $redeemProduct->name }}</h1>

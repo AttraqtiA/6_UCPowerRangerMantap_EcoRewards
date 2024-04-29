@@ -22,7 +22,7 @@ class GarbageController extends Controller
             $garbages = Garbage::paginate(10);
         }
 
-        return view('GarbageBank.garbageList', [
+        return view('GarbageBank.GarbageListPage', [
             "active_3" => "text-yellow-500",
             "garbages" => $garbages
         ]);

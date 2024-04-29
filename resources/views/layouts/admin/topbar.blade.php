@@ -82,12 +82,12 @@
                         Poin</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="/buatMisi"
                         class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-500 md:p-0">Buat
                         Misi</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="/misi"
                         class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-500 md:p-0">Cek
                         Misi</a>
                 </li>
